@@ -14,3 +14,13 @@ A fast, developer-friendly source code translator supporting 12+ programming lan
 2. Click the **Settings (⚙️)** button and enter your Groq API Key.
 3. Paste your code into the source panel and choose your target language.
 4. Click **Translate** to view the translated code.
+
+## 🌐 Supported Programming Languages
+- Python, JavaScript, TypeScript, Rust, Go, C++, C#, Java, Swift, Kotlin, PHP, Ruby
+
+## ⌨️ Shortcuts
+- `Ctrl` / `Cmd` + `Enter`: Run code translation
+- `Escape`: Close settings dialog
+
+## 📄 License
+MIT License (c) 2026 deysoumyadip378-ux
