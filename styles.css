@@ -297,3 +297,9 @@ code {
     display: flex;
     justify-content: flex-end;
 }
+
+/* Accessibility focus state */
+button:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #10b981;
+    outline-offset: 2px;
+}
