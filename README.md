@@ -24,3 +24,7 @@ A fast, developer-friendly source code translator supporting 12+ programming lan
 
 ## 📄 License
 MIT License (c) 2026 deysoumyadip378-ux
+
+
+## 🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
