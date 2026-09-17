@@ -120,3 +120,14 @@ Return ONLY the translated code within markdown code blocks (e.g. \`\`\`${tgtLan
         translateSpinner.classList.add('hidden');
     }
 });
+
+// Keyboard shortcut: Ctrl+Enter to trigger translation
+document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        translateCode();
+    }
+    if (e.key === 'Escape' && !settingsModal.classList.contains('hidden')) {
+        settingsModal.classList.add('hidden');
+    }
+});
