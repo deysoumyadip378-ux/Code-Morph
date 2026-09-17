@@ -140,3 +140,11 @@ if (copyBtn) {
         setTimeout(() => { copyBtn.innerHTML = originalText; }, 1800);
     });
 }
+
+// Source code metrics logger
+if (sourceCode) {
+    sourceCode.addEventListener('input', () => {
+        const lines = sourceCode.value.split('\n').length;
+        console.debug(`[CodeMorph] Source code lines: ${lines}`);
+    });
+}
