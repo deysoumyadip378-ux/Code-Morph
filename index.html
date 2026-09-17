@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Morph - Translator</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1><i data-lucide="terminal"></i> Code Morph</h1>
+        </div>
+        <button id="settingsBtn" class="btn-icon" title="Settings"><i data-lucide="settings"></i></button>
+    </header>
+
+    <main class="container">
+        <div class="panel source-panel">
+            <div class="panel-header">
+                <div class="select-group">
+                    <label for="sourceLang">Source</label>
+                    <select id="sourceLang">
+                        <option value="auto">Auto-detect</option>
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="rust">Rust</option>
+                        <option value="go">Go</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="csharp">C#</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="php">PHP</option>
+                        <option value="swift">Swift</option>
+                    </select>
+                </div>
+                <button id="translateBtn" class="btn-primary">
+                    <i data-lucide="code-2"></i> Translate
+                    <div class="spinner hidden" id="translateSpinner"></div>
+                </button>
+            </div>
+            <textarea id="sourceCode" placeholder="Enter source code here..."></textarea>
+        </div>
+
+        <div class="panel target-panel">
+            <div class="panel-header">
+                <div class="select-group">
+                    <label for="targetLang">Target</label>
+                    <select id="targetLang">
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="rust">Rust</option>
+                        <option value="go">Go</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="csharp">C#</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="php">PHP</option>
+                        <option value="swift">Swift</option>
+                    </select>
+                </div>
+                <button id="copyBtn" class="btn-secondary" title="Copy to clipboard">
+                    <i data-lucide="copy"></i> Copy
+                </button>
+            </div>
+            <div class="code-container">
+                <pre><code id="outputCode" class="language-plaintext">Translated code will appear here...</code></pre>
+            </div>
+        </div>
+    </main>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button id="closeModalBtn" class="btn-icon"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body">
+                <label for="apiKey">GROQ API Key</label>
+                <input type="password" id="apiKey" placeholder="gsk_...">
+                <p class="help-text">Your API key is stored locally in your browser.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="saveSettingsBtn" class="btn-primary">Save Key</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
