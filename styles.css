@@ -303,3 +303,12 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
     outline: 2px solid #10b981;
     outline-offset: 2px;
 }
+
+/* Code block accent styling */
+.editor-panel {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.editor-panel:focus-within {
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);
+}
