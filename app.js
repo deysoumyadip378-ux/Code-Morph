@@ -131,3 +131,12 @@ document.addEventListener('keydown', (e) => {
         settingsModal.classList.add('hidden');
     }
 });
+
+// Enhanced copy visual indicator
+if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<span>✓ Copied!</span>';
+        setTimeout(() => { copyBtn.innerHTML = originalText; }, 1800);
+    });
+}
