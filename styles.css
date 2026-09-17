@@ -312,3 +312,9 @@ button:focus-visible, select:focus-visible, textarea:focus-visible {
     border-color: rgba(16, 185, 129, 0.4);
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);
 }
+
+@media (max-width: 768px) {
+    .workspace-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
